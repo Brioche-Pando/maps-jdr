@@ -1,6 +1,7 @@
 import { MapContainer, ImageOverlay, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
+import L, { type LatLngBoundsExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { type FC } from "react";
 
 interface Place {
   id: number;
@@ -15,12 +16,12 @@ interface MapProps {
   places: Place[];
 }
 
-const bounds = [
+const bounds: LatLngBoundsExpression = [
   [0, 0],
   [720, 1097],
 ]; // Ajuste les dimensions selon ta carte
 
-const Map: React.FC<MapProps> = ({ places }) => {
+const Map: FC<MapProps> = ({ places }) => {
   return (
     <MapContainer
       center={[360, 548.5]} // Centre initial de la carte
