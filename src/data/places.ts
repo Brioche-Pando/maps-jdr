@@ -1,23 +1,17 @@
-const places = [
+import { type TPlaces } from "@/types/place";
+
+const places: TPlaces = [
   {
     id: 1,
-    title: "Taverne du Dragon",
-    icon : "anvil",
+    title: "Le Mousse Gelé",
+    icon: "tavern",
     description:
-      "La taverne la plus célèbre de la ville, où les aventuriers se retrouvent.",
-    latitude: 500,
-    longitude: 500,
-  },
-  {
-    id: 2,
-    title: "Marché Noir",
-    icon : "anvil",
-    description:
-      "Un marché souterrain où tout peut être acheté pour le bon prix.",
-    latitude: 600,
-    longitude: 550,
-  },
-  // Ajoute d'autres lieux ici
+      "Le Mousse Gelé est une auberge réputée pour ses boissons rafraîchissantes et son atmosphère chaleureuse. Située près des quais, elle attire aussi bien les marins de passage que les habitants de la ville. Le Mousse Gelé est connu pour son cidre épicé, une boisson qui réchauffe le corps après une longue journée dans le froid glacial de la ville.",
+    banner:"mousse_gele",
+      latitude: 465,
+    longitude: 505,
+    npc: [],
+  }
 ];
 
 export default places;

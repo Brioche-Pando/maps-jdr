@@ -9,7 +9,7 @@ const Map = dynamic(() => import("@/components/Map"), {
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between'>
+    <main className='min-h-screen'>
       <Map places={places} />
     </main>
   );
