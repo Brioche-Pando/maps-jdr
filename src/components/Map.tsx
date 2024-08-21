@@ -1,18 +1,22 @@
 import { MapContainer, ImageOverlay, Marker } from "react-leaflet";
-import L, { Point, type LatLngBoundsExpression } from "leaflet";
+import L, { type LatLngBoundsExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useState, type FC } from "react";
-import { type TPlace, type TPlaces } from "@/types/place";
+import { type TPlace } from "@/types/place";
 import Popup from "./Popup";
 
-import '@/scss/style.scss'
+import "@/scss/style.scss";
+
+interface IMapProps {
+  places: TPlace[];
+}
 
 const bounds: LatLngBoundsExpression = [
   [0, 0],
   [720, 1097],
 ]; // Ajuste les dimensions selon ta carte
 
-const Map: FC<TPlaces> = ({ places }) => {
+const Map: FC<IMapProps> = ({ places }) => {
   const [selectedPlace, setSelectedPlace] = useState<TPlace | null>(null);
 
   return (

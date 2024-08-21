@@ -30,7 +30,6 @@ const Popup: FC<PopupProps> = ({ place, onClose }) => {
           >
             &times;
           </button>
-
           {/* Banner */}
           <div className='h-64'>
             <Image
