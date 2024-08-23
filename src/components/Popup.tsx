@@ -66,7 +66,7 @@ const Popup: FC<PopupProps> = ({ place, onClose }) => {
                 <AiOutlineFullscreen />
               </button>
               {/* Banner */}
-              <div className='h-96'>
+              <div className='h-60'>
                 <Image
                   src={`/images/places/${place.banner}.webp`}
                   alt={place.title}
@@ -77,15 +77,15 @@ const Popup: FC<PopupProps> = ({ place, onClose }) => {
               </div>
             </div>
             <div className='bottom-0 left-0 w-full bg-orange-950 text-white text-center py-2'>
-              <h3 className='text-xl ff-primer-regular uppercase'>
+              <h3 className='text-l ff-primer-regular uppercase'>
                 {place.title}
               </h3>
             </div>
 
             {/* Content */}
-            <div className='p-4 max-h-full overflow-y-auto'>
+            <div className='px-4 pt-1 pb-4 max-h-full overflow-y-auto'>
               {/* Tabs */}
-              <div className='border-b border-gray-200 mb-4'>
+              <div className='border-b border-gray-200 mb-2'>
                 <ul className='flex justify-around'>
                   <li className='w-1/2 text-center'>
                     <button

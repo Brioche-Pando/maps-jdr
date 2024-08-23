@@ -23,7 +23,7 @@ const Map: FC<IMapProps> = ({ places }) => {
     <>
       <MapContainer
         center={[360, 548.5]} // Centre initial de la carte
-        zoom={0}
+        zoom={-1}
         style={{ height: "100vh", width: "100%", backgroundColor: "#e5e5da" }}
         crs={L.CRS.Simple} // Système de coordonnées simple pour les images
         attributionControl={false}
@@ -32,7 +32,7 @@ const Map: FC<IMapProps> = ({ places }) => {
         minZoom={1} // Ajuster en fonction de la taille de l'image pour éviter de voir les bordures
         maxZoom={2} // Limite le zoom pour éviter d'aller trop loin
       >
-        <ImageOverlay url='./images/ville_du_crépuscule.svg' bounds={bounds} />
+        <ImageOverlay url='./images/ville_du_crépuscule.jpg' bounds={bounds} />
         {places.map((place: TPlace) => (
           <Marker
             key={place.id}
