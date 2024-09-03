@@ -83,54 +83,10 @@ const Popup: FC<PopupProps> = ({ place, onClose }) => {
             </div>
 
             {/* Content */}
-            <div className='px-4 pt-1 pb-4 max-h-full overflow-y-auto'>
-              {/* Tabs */}
-              <div className='border-b border-gray-200 mb-2'>
-                <ul className='flex justify-around'>
-                  <li className='w-1/2 text-center'>
-                    <button
-                      className={`py-2 w-full font-semibold ${
-                        activeTab === "description"
-                          ? "text-orange-950 border-b-2 border-orange-950"
-                          : "text-gray-700 hover:text-orange-950"
-                      }`}
-                      onClick={() => setActiveTab("description")}
-                    >
-                      Description
-                    </button>
-                  </li>
-                  <li className='w-1/2 text-center'>
-                    <button
-                      className={`py-2 w-full font-semibold ${
-                        activeTab === "npc"
-                          ? "text-orange-950 border-b-2 border-orange-950"
-                          : place.npc && place.npc.length === 0
-                          ? "text-gray-400 cursor-not-allowed"
-                          : "text-gray-700 hover:text-orange-950"
-                      }`}
-                      onClick={() =>
-                        place.npc && place.npc.length > 0 && setActiveTab("npc")
-                      }
-                      disabled={place.npc && place.npc.length === 0}
-                    >
-                      PNJ
-                    </button>
-                  </li>
-                </ul>
-              </div>
-
+            <div className='p-4 max-h-full overflow-y-auto'>
               {/* Tab Content */}
               <div>
-                {activeTab === "description" && (
-                  <div>
-                    <p>{place.description}</p>
-                  </div>
-                )}
-                {activeTab === "npc" && place.npc && (
-                  <div>
-                    <p>Liste des npc à venir...</p>
-                  </div>
-                )}
+                <p>{place.description}</p>
               </div>
             </div>
           </div>
