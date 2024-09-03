@@ -94,7 +94,7 @@ const places: TPlaces = [
     title: "Bains publics",
     icon: "towel",
     description:
-      "Les Bains publics sont un endroit prisé par la population pour se détendre et se revitaliser. Offrant des installations gratuites, c'est un lieu de rencontre où l'on discute affaires, femmes et plaisirs.",
+      "Les Bains publics sont un endroit prisé par la population pour se détendre et se revitaliser. Offrant des installations gratuites, c'est un lieu de rencontre où l'on discute affaires et plaisirs.",
     banner: "bains_publics",
     latitude: 170,
     longitude: 460,
