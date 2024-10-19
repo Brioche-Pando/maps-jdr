@@ -86,7 +86,7 @@ const Popup: FC<PopupProps> = ({ place, onClose }) => {
             <div className='p-4 max-h-full overflow-y-auto'>
               {/* Tab Content */}
               <div>
-                <p>{place.description}</p>
+                <p className='text-black'>{place.description}</p>
               </div>
             </div>
           </div>
